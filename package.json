@@ -1,0 +1,24 @@
+{
+  "name": "smart-scientific-calculator",
+  "version": "1.0.0",
+  "description": "A feature-rich scientific calculator with voice recognition, calculation history, and memory functions",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'No build required for static site'",
+    "test": "echo 'Add tests here'"
+  },
+  "keywords": [
+    "calculator",
+    "scientific",
+    "voice",
+    "math",
+    "web-app"
+  ],
+  "author": "a17469398-code",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a17469398-code/Equationsolver-"
+  }
+}

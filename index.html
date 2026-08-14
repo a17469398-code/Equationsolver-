@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart Scientific Calculator with voice recognition and calculation history">
+    <meta name="theme-color" content="#2563eb">
+    <title>Smart Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="calculator-container">
+    <div class="calculator">
+        <div class="header">
+            <h1>🧮 Smart Calculator</h1>
+            <p class="subtitle">Scientific Calculator with Voice Support</p>
+        </div>
+
+        <div class="display-section">
+            <div class="display">
+                <input id="expression" type="text" placeholder="0" autocomplete="off" class="expression-input">
+                <div id="result" class="result-display">0</div>
+            </div>
+        </div>
+
+        <div class="controls-section">
+            <div class="memory-controls">
+                <button onclick="memoryClear()" class="memory-btn" title="Clear Memory">MC</button>
+                <button onclick="memoryRecall()" class="memory-btn" title="Recall Memory">MR</button>
+                <button onclick="memoryAdd()" class="memory-btn" title="Add to Memory">M+</button>
+                <button onclick="memorySubtract()" class="memory-btn" title="Subtract from Memory">M-</button>
+            </div>
+
+            <div class="scientific-controls">
+                <button onclick="add('sin(')" class="scientific-btn" title="Sine">sin</button>
+                <button onclick="add('cos(')" class="scientific-btn" title="Cosine">cos</button>
+                <button onclick="add('tan(')" class="scientific-btn" title="Tangent">tan</button>
+                <button onclick="add('sqrt(')" class="scientific-btn" title="Square Root">√</button>
+                <button onclick="add('log(')" class="scientific-btn" title="Logarithm base 10">log</button>
+                <button onclick="add('ln(')" class="scientific-btn" title="Natural Logarithm">ln</button>
+                <button onclick="add('^')" class="scientific-btn" title="Power">x^y</button>
+                <button onclick="add('π')" class="scientific-btn" title="Pi">π</button>
+            </div>
+        </div>
+
+        <div class="buttons-grid">
+            <button onclick="clearAll()" class="btn clear-btn" title="Clear All (Esc)">C</button>
+            <button onclick="backspace()" class="btn delete-btn" title="Delete (Backspace)">⌫</button>
+            <button onclick="add('(')" class="btn operator-btn" title="Open Parenthesis">(</button>
+            <button onclick="add(')')" class="btn operator-btn" title="Close Parenthesis">)</button>
+
+            <button onclick="add('7')" class="btn number-btn">7</button>
+            <button onclick="add('8')" class="btn number-btn">8</button>
+            <button onclick="add('9')" class="btn number-btn">9</button>
+            <button onclick="add('/')" class="btn operator-btn" title="Divide">÷</button>
+
+            <button onclick="add('4')" class="btn number-btn">4</button>
+            <button onclick="add('5')" class="btn number-btn">5</button>
+            <button onclick="add('6')" class="btn number-btn">6</button>
+            <button onclick="add('*')" class="btn operator-btn" title="Multiply">×</button>
+
+            <button onclick="add('1')" class="btn number-btn">1</button>
+            <button onclick="add('2')" class="btn number-btn">2</button>
+            <button onclick="add('3')" class="btn number-btn">3</button>
+            <button onclick="add('-')" class="btn operator-btn" title="Subtract">−</button>
+
+            <button onclick="add('0')" class="btn number-btn zero-btn">0</button>
+            <button onclick="add('.')" class="btn decimal-btn" title="Decimal Point">.</button>
+            <button onclick="calculate()" class="btn equal-btn" title="Calculate (Enter)">=</button>
+            <button onclick="add('+')" class="btn operator-btn" title="Add">+</button>
+        </div>
+
+        <button onclick="startVoice()" class="voice-btn" title="Voice Input">
+            🎤 Voice Calculator
+        </button>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h3>📋 Calculation History</h3>
+                <button onclick="clearHistory()" class="clear-history-btn" title="Clear History">×</button>
+            </div>
+            <div id="historyList" class="history-list"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

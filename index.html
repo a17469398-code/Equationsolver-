@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
     <meta name="description" content="Smart Scientific Calculator with voice recognition and calculation history">
     <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Calculator">
     <title>Smart Scientific Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🧮</text></svg>">
 </head>
 <body>
 
@@ -26,59 +30,59 @@
 
         <div class="controls-section">
             <div class="memory-controls">
-                <button onclick="memoryClear()" class="memory-btn" title="Clear Memory">MC</button>
-                <button onclick="memoryRecall()" class="memory-btn" title="Recall Memory">MR</button>
-                <button onclick="memoryAdd()" class="memory-btn" title="Add to Memory">M+</button>
-                <button onclick="memorySubtract()" class="memory-btn" title="Subtract from Memory">M-</button>
+                <button onclick="memoryClear()" class="memory-btn" title="Clear Memory" type="button">MC</button>
+                <button onclick="memoryRecall()" class="memory-btn" title="Recall Memory" type="button">MR</button>
+                <button onclick="memoryAdd()" class="memory-btn" title="Add to Memory" type="button">M+</button>
+                <button onclick="memorySubtract()" class="memory-btn" title="Subtract from Memory" type="button">M-</button>
             </div>
 
             <div class="scientific-controls">
-                <button onclick="add('sin(')" class="scientific-btn" title="Sine">sin</button>
-                <button onclick="add('cos(')" class="scientific-btn" title="Cosine">cos</button>
-                <button onclick="add('tan(')" class="scientific-btn" title="Tangent">tan</button>
-                <button onclick="add('sqrt(')" class="scientific-btn" title="Square Root">√</button>
-                <button onclick="add('log(')" class="scientific-btn" title="Logarithm base 10">log</button>
-                <button onclick="add('ln(')" class="scientific-btn" title="Natural Logarithm">ln</button>
-                <button onclick="add('^')" class="scientific-btn" title="Power">x^y</button>
-                <button onclick="add('π')" class="scientific-btn" title="Pi">π</button>
+                <button onclick="add('sin(')" class="scientific-btn" title="Sine" type="button">sin</button>
+                <button onclick="add('cos(')" class="scientific-btn" title="Cosine" type="button">cos</button>
+                <button onclick="add('tan(')" class="scientific-btn" title="Tangent" type="button">tan</button>
+                <button onclick="add('sqrt(')" class="scientific-btn" title="Square Root" type="button">√</button>
+                <button onclick="add('log(')" class="scientific-btn" title="Logarithm base 10" type="button">log</button>
+                <button onclick="add('ln(')" class="scientific-btn" title="Natural Logarithm" type="button">ln</button>
+                <button onclick="add('^')" class="scientific-btn" title="Power" type="button">x^y</button>
+                <button onclick="add('π')" class="scientific-btn" title="Pi" type="button">π</button>
             </div>
         </div>
 
         <div class="buttons-grid">
-            <button onclick="clearAll()" class="btn clear-btn" title="Clear All (Esc)">C</button>
-            <button onclick="backspace()" class="btn delete-btn" title="Delete (Backspace)">⌫</button>
-            <button onclick="add('(')" class="btn operator-btn" title="Open Parenthesis">(</button>
-            <button onclick="add(')')" class="btn operator-btn" title="Close Parenthesis">)</button>
+            <button onclick="clearAll()" class="btn clear-btn" title="Clear All (Esc)" type="button">C</button>
+            <button onclick="backspace()" class="btn delete-btn" title="Delete (Backspace)" type="button">⌫</button>
+            <button onclick="add('(')" class="btn operator-btn" title="Open Parenthesis" type="button">(</button>
+            <button onclick="add(')')" class="btn operator-btn" title="Close Parenthesis" type="button">)</button>
 
-            <button onclick="add('7')" class="btn number-btn">7</button>
-            <button onclick="add('8')" class="btn number-btn">8</button>
-            <button onclick="add('9')" class="btn number-btn">9</button>
-            <button onclick="add('/')" class="btn operator-btn" title="Divide">÷</button>
+            <button onclick="add('7')" class="btn number-btn" type="button">7</button>
+            <button onclick="add('8')" class="btn number-btn" type="button">8</button>
+            <button onclick="add('9')" class="btn number-btn" type="button">9</button>
+            <button onclick="add('/')" class="btn operator-btn" title="Divide" type="button">÷</button>
 
-            <button onclick="add('4')" class="btn number-btn">4</button>
-            <button onclick="add('5')" class="btn number-btn">5</button>
-            <button onclick="add('6')" class="btn number-btn">6</button>
-            <button onclick="add('*')" class="btn operator-btn" title="Multiply">×</button>
+            <button onclick="add('4')" class="btn number-btn" type="button">4</button>
+            <button onclick="add('5')" class="btn number-btn" type="button">5</button>
+            <button onclick="add('6')" class="btn number-btn" type="button">6</button>
+            <button onclick="add('*')" class="btn operator-btn" title="Multiply" type="button">×</button>
 
-            <button onclick="add('1')" class="btn number-btn">1</button>
-            <button onclick="add('2')" class="btn number-btn">2</button>
-            <button onclick="add('3')" class="btn number-btn">3</button>
-            <button onclick="add('-')" class="btn operator-btn" title="Subtract">−</button>
+            <button onclick="add('1')" class="btn number-btn" type="button">1</button>
+            <button onclick="add('2')" class="btn number-btn" type="button">2</button>
+            <button onclick="add('3')" class="btn number-btn" type="button">3</button>
+            <button onclick="add('-')" class="btn operator-btn" title="Subtract" type="button">−</button>
 
-            <button onclick="add('0')" class="btn number-btn zero-btn">0</button>
-            <button onclick="add('.')" class="btn decimal-btn" title="Decimal Point">.</button>
-            <button onclick="calculate()" class="btn equal-btn" title="Calculate (Enter)">=</button>
-            <button onclick="add('+')" class="btn operator-btn" title="Add">+</button>
+            <button onclick="add('0')" class="btn number-btn zero-btn" type="button">0</button>
+            <button onclick="add('.')" class="btn decimal-btn" title="Decimal Point" type="button">.</button>
+            <button onclick="calculate()" class="btn equal-btn" title="Calculate (Enter)" type="button">=</button>
+            <button onclick="add('+')" class="btn operator-btn" title="Add" type="button">+</button>
         </div>
 
-        <button onclick="startVoice()" class="voice-btn" title="Voice Input">
+        <button onclick="startVoice()" class="voice-btn" title="Voice Input" type="button">
             🎤 Voice Calculator
         </button>
 
         <div class="history-section">
             <div class="history-header">
                 <h3>📋 Calculation History</h3>
-                <button onclick="clearHistory()" class="clear-history-btn" title="Clear History">×</button>
+                <button onclick="clearHistory()" class="clear-history-btn" title="Clear History" type="button">×</button>
             </div>
             <div id="historyList" class="history-list"></div>
         </div>
